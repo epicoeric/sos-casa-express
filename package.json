@@ -1,0 +1,11 @@
+{
+  "name": "sos-casa-express",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Landing page estática para SOS Casa Express",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  }
+}
+
