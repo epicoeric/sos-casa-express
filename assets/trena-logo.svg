@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="trenaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5a2c"/>
+      <stop offset="100%" stop-color="#e53805"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#trenaGradient)"/>
+  <path d="M20 24h24v4h-9v16h-6V28h-9z" fill="#ffffff"/>
+</svg>

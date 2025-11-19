@@ -1,12 +1,10 @@
-// Mobile nav toggle
+// Mobile nav toggle (glass dropdown)
 const navToggle = document.querySelector('.nav-toggle');
 const menu = document.getElementById('menu');
 if (navToggle && menu) {
   navToggle.addEventListener('click', () => {
-    const open = menu.style.display === 'flex';
-    menu.style.display = open ? 'none' : 'flex';
-    menu.style.flexDirection = 'column';
-    navToggle.setAttribute('aria-expanded', String(!open));
+    const open = menu.classList.toggle('menu--open');
+    navToggle.setAttribute('aria-expanded', String(open));
   });
 }
 
@@ -88,4 +86,18 @@ document.querySelectorAll('form').forEach(f =>{
     window.addEventListener('touchstart', resume, { once: true });
     window.addEventListener('click', resume, { once: true });
   } catch(_){}
+})();
+
+// Mascot floating entrance animation (first visit)
+(function initMascotFloating(){
+  const mascot = document.querySelector('.mascot-floating');
+  if (!mascot) return;
+  const KEY = 'mascotIntroShown';
+  try{
+    if (window.localStorage && localStorage.getItem(KEY)) return;
+    mascot.classList.add('mascot-floating--enter');
+    if (window.localStorage) localStorage.setItem(KEY, '1');
+  }catch(_){
+    mascot.classList.add('mascot-floating--enter');
+  }
 })();
