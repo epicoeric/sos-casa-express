@@ -44,16 +44,32 @@ document.querySelectorAll('[data-carousel]').forEach(initCarousel);
 const y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
 
-// Fake form submit for demo
-document.querySelectorAll('form').forEach(f =>{
-  f.addEventListener('submit', e =>{
+// Contact form -> WhatsApp message
+const contatoForm = document.getElementById('contato-form');
+if (contatoForm) {
+  contatoForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const btn = f.querySelector('button[type="submit"]');
-    const prevText = btn.textContent;
-    btn.disabled = true; btn.textContent = 'Enviado! Retornaremos em breve';
-    setTimeout(()=>{ btn.disabled = false; btn.textContent = prevText; f.reset(); }, 1800);
+    if (!contatoForm.reportValidity()) return;
+
+    const data = new FormData(contatoForm);
+    const nome = String(data.get('nome') || '').trim();
+    const contato = String(data.get('contato') || '').trim();
+    const tipo = String(data.get('tipo') || '').trim();
+    const link = String(data.get('link') || '').trim();
+
+    const linhas = [
+      'Olá! Gostaria de solicitar uma análise do meu imóvel.',
+      `Nome: ${nome}`,
+      `Contato: ${contato}`,
+      `Tipo de imóvel: ${tipo}`
+    ];
+    if (link) linhas.push(`Link do anúncio: ${link}`);
+
+    const numero = contatoForm.dataset.whatsapp || '5511994786873';
+    const texto = encodeURIComponent(linhas.join('\n'));
+    window.location.href = `https://wa.me/${numero}?text=${texto}`;
   });
-});
+}
 
 // Ensure hero video plays inline and continuously on mobile
 (function ensureHeroVideo(){

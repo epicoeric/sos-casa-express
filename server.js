@@ -2,7 +2,17 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = process.env.PORT || 5173;
+function readPort(argv){
+  const idx = argv.findIndex(arg => arg === '--port' || arg === '-p');
+  if (idx !== -1 && argv[idx + 1]) return parseInt(argv[idx + 1], 10);
+  const withEq = argv.find(arg => arg.startsWith('--port='));
+  if (withEq) return parseInt(withEq.split('=')[1], 10);
+  return undefined;
+}
+
+const cliPort = readPort(process.argv.slice(2));
+const envPort = process.env.PORT ? parseInt(process.env.PORT, 10) : undefined;
+const PORT = Number.isFinite(cliPort) ? cliPort : (Number.isFinite(envPort) ? envPort : 5173);
 const baseDir = process.cwd();
 
 const types = {

@@ -203,12 +203,12 @@
             </div>
             <p>Sem compromisso: avaliamos o estado atual e indicamos o melhor caminho para preparar o imóvel para fotos e visitas, com prazo e orçamento claros.</p>
             <ul class="ticks">
-              <li>Análise em até 24h</li>
+              <li>Análise em até 48h</li>
               <li>Checklists e fotos da execução</li>
               <li>Pagamento facilitado</li>
             </ul>
           </div>
-          <form class="card form" aria-label="Solicitar análise">
+          <form id="contato-form" class="card form" aria-label="Solicitar análise" data-whatsapp="5511994786873">
             <label class="field">
               <span>Seu nome</span>
               <input type="text" name="nome" placeholder="Como podemos te chamar?" required />
@@ -256,15 +256,15 @@
                 <img src="assets/brasao-maringa.png" alt="Brasão do município de Maringá — PR" />
                 <div class="person-body">
                   <h3>Unidade Maringá — PR</h3>
-                  <p>Atendimento em Maringá e região. Limpeza pós‑obra, pintura de repasse e reparos rápidos para venda e locação. Cobertura: Maringá, Sarandi, Paiçandu.</p>
+                  <p>Atendimento em Maringá. Limpeza pós‑obra, pintura de repasse e reparos rápidos para venda e locação.</p>
                   <div class="unit-contact-badge">Falar com a unidade</div>
                   <div class="unit-contact-line">
                     <span class="unit-contact-name">Flavio Oliva</span>
                     <span class="unit-contact-icons">
-                      <a href="#" aria-label="WhatsApp da unidade Maringá (Flavio Oliva)" class="unit-icon">
+                      <a href="https://wa.me/5513997251002?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20do%20meu%20im%C3%B3vel%20em%20Maring%C3%A1.%20Preciso%20de%20limpeza%20p%C3%B3s-obra%20e%20pintura%20de%20repasse.%20Poderiam%20informar%20prazos%20e%20valores%3F" aria-label="WhatsApp da unidade Maringá (Flavio Oliva)" class="unit-icon">
                         <i class="fa-brands fa-whatsapp"></i>
                       </a>
-                      <a href="#" aria-label="E-mail da unidade Maringá (Flavio Oliva)" class="unit-icon">
+                      <a href="mailto:flaviooliva_fo@hotmail.com" aria-label="E-mail da unidade Maringá (Flavio Oliva)" class="unit-icon">
                         <i class="fa-regular fa-envelope"></i>
                       </a>
                     </span>
@@ -275,15 +275,15 @@
                 <img src="assets/brasao-bernardino-de-campos.png" alt="Brasão do município de Bernardino de Campos — SP" />
                 <div class="person-body">
                   <h3>Unidade Bernardino de Campos — SP</h3>
-                  <p>Operação dedicada ao interior de SP. Preparação completa de imóveis com prazos curtos. Cobertura: Bernardino de Campos, Ourinhos, Santa Cruz do Rio Pardo e região.</p>
+                  <p>Operação dedicada ao interior de SP. Preparação completa de imóveis com prazos curtos. Cobertura: Bernardino de Campos, Santa Cruz do Rio Pardo e região.</p>
                   <div class="unit-contact-badge">Falar com a unidade</div>
                   <div class="unit-contact-line">
                     <span class="unit-contact-name">Rogerio Zavattieri</span>
                     <span class="unit-contact-icons">
-                      <a href="#" aria-label="WhatsApp da unidade Bernardino de Campos">
+                      <a href="https://wa.me/5511994786873?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20do%20meu%20im%C3%B3vel%20na%20regi%C3%A3o%20de%20Bernardino%20de%20Campos.%20Preciso%20de%20prepara%C3%A7%C3%A3o%20completa%20do%20im%C3%B3vel.%20Poderiam%20informar%20prazos%20e%20valores%3F" aria-label="WhatsApp da unidade Bernardino de Campos">
                         <i class="fa-brands fa-whatsapp"></i>
                       </a>
-                      <a href="#" aria-label="E-mail da unidade Bernardino de Campos">
+                      <a href="mailto:soscasaexpress@terra.com.br" aria-label="E-mail da unidade Bernardino de Campos">
                         <i class="fa-regular fa-envelope"></i>
                       </a>
                     </span>
@@ -314,7 +314,7 @@
                   </header>
                   <iframe title="Mapa Maringá PR" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Maring%C3%A1%20-%20PR&output=embed"></iframe>
                   <ul class="map-notes">
-                    <li>Cidades: Maringá, Sarandi, Paiçandu</li>
+                    <li>Cidade: Maringá</li>
                   </ul>
                 </article>
                 <article class="card map-card">
@@ -324,7 +324,7 @@
                   </header>
                   <iframe title="Mapa Bernardino de Campos SP" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Bernardino%20de%20Campos%20-%20SP&output=embed"></iframe>
                   <ul class="map-notes">
-                    <li>Cidades: Bernardino de Campos, Ourinhos, Santa Cruz do Rio Pardo</li>
+                    <li>Cidades: Bernardino de Campos, Santa Cruz do Rio Pardo e região</li>
                   </ul>
                 </article>
               </div>
@@ -429,10 +429,8 @@
               <a class="btn btn-primary" href="#contato">Analisar meu projeto gratuitamente</a>
             </div>
             <ul class="contact">
-              <li>📞 <span>(11) 1234‑5678 • (11) 98765‑5432</span></li>
-              <li>✉️ <span>contato@soscasaexpress.com</span></li>
-              <li>📍 <span>Endereço: (Sede própria) Rua 8 de Dezembro, 40 - Bernardino de Campos-SP</span></li>
-              <li><span>CNPJ: 00.000.000/0001-00</span></li>
+              <li>📞 <span>(11) 99478-6873</span></li>
+              <li>✉️ <span>soscasaexpress@terra.com.br</span></li>
             </ul>
           </div>
         </div>
